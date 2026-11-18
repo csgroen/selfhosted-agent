@@ -1,0 +1,11 @@
+# Agent model: the base model with sampling settings for coding/agentic work.
+# setup.sh replaces @MODEL_BASE@ with MODEL_BASE from env.sh.
+# The values below are Qwen3.x's recommended settings for thinking mode; check the
+# model card and adapt them if you switch to another model family.
+FROM @MODEL_BASE@
+PARAMETER temperature 0.6
+PARAMETER top_p 0.95
+PARAMETER top_k 20
+PARAMETER min_p 0
+PARAMETER presence_penalty 0
+PARAMETER repeat_penalty 1
